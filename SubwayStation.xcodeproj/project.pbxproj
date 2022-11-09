@@ -46,8 +46,8 @@
 		69607324291BE90D00A9F750 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				69607322291BE90800A9F750 /* StationDetailViewController.swift */,
 				69607325291BEA9000A9F750 /* StationSearchViewController.swift */,
+				69607322291BE90800A9F750 /* StationDetailViewController.swift */,
 				69607327291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift */,
 			);
 			path = Scenes;

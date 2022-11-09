@@ -42,7 +42,7 @@ final class StationDetailCollectionViewCell: UICollectionViewCell {
         
         remainTimeLabel.snp.makeConstraints {
             $0.leading.equalTo(lineLabel)
-            $0.top.equalTo(lineLabel.snp.bottom).inset(16.0)
+            $0.top.equalTo(lineLabel.snp.bottom).offset(16.0)
             $0.bottom.equalToSuperview().inset(16.0)
         }
         

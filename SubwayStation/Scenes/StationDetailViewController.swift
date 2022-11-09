@@ -10,6 +10,17 @@ import SnapKit
 
 final class StationDetailViewController: UIViewController {
     
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
+        return refreshControl
+    }()
+    
+    @objc func fetchData() {
+        print("Refresh")
+        refreshControl.endRefreshing()
+    }
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(
@@ -22,7 +33,9 @@ final class StationDetailViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = .systemBackground
         collectionView.register(StationDetailCollectionViewCell.self, forCellWithReuseIdentifier: "StationDetailCollectionViewCell")
+        
         collectionView.dataSource = self
+        collectionView.refreshControl = refreshControl
         
         return collectionView
     }()
