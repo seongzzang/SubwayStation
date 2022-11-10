@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		690ECD9B291D388000BBA8D9 /* StationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690ECD9A291D388000BBA8D9 /* StationResponseModel.swift */; };
 		69607323291BE90800A9F750 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69607322291BE90800A9F750 /* StationDetailViewController.swift */; };
 		69607326291BEA9000A9F750 /* StationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69607325291BEA9000A9F750 /* StationSearchViewController.swift */; };
 		69607328291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69607327291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		690ECD9A291D388000BBA8D9 /* StationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationResponseModel.swift; sourceTree = "<group>"; };
 		69607322291BE90800A9F750 /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		69607325291BEA9000A9F750 /* StationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchViewController.swift; sourceTree = "<group>"; };
 		69607327291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 				69607325291BEA9000A9F750 /* StationSearchViewController.swift */,
 				69607322291BE90800A9F750 /* StationDetailViewController.swift */,
 				69607327291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift */,
+				690ECD9A291D388000BBA8D9 /* StationResponseModel.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69607323291BE90800A9F750 /* StationDetailViewController.swift in Sources */,
+				690ECD9B291D388000BBA8D9 /* StationResponseModel.swift in Sources */,
 				69B0E72D291A81CD003E89AC /* AppDelegate.swift in Sources */,
 				69607326291BEA9000A9F750 /* StationSearchViewController.swift in Sources */,
 				69607328291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift in Sources */,
