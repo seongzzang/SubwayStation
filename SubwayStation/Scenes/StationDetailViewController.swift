@@ -17,21 +17,6 @@ final class StationDetailViewController: UIViewController {
         return refreshControl
     }()
     
-    @objc func fetchData() {
-      //  refreshControl.endRefreshing()
-        
-        let urlString = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/왕십리"
-        
-        AF
-            .request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
-            .responseDecodable(of: StationArrivalDateResponseModel.self) { response in
-                guard case .success(let data) = response.result else {return}
-                
-                print(data.realtimeArrivalList)
-            }
-            .resume()
-    }
-    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = CGSize(
@@ -60,6 +45,23 @@ final class StationDetailViewController: UIViewController {
         collectionView.snp.makeConstraints{ $0.edges.equalToSuperview()}
         
         fetchData()
+    }
+    
+    @objc private func fetchData() {
+        
+        let stationName = "서울역"
+        let urlString = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/\(stationName.replacingOccurrences(of: "역", with: ""))"
+        
+        AF
+            .request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
+            .responseDecodable(of: StationArrivalDateResponseModel.self) { [weak self] response in
+                self?.refreshControl.endRefreshing()
+                
+                guard case .success(let data) = response.result else {return}
+                
+                print(data.realtimeArrivalList)
+            }
+            .resume()
     }
 }
 
