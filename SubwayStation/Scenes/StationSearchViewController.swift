@@ -49,13 +49,14 @@ class StationSearchViewController: UIViewController{
     }
     
     private func requestStationName(){
-        let urlString = "http://openapi.seoul.go.kr:8088/sample/json/SearchInfoBySubwayNameService/1/5/서울역"
+        let urlString = "http://openapi.seoul.go.kr:8088/sample/json/SearchInfoBySubwayNameService/1/5/서울"
         
-        AF.request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
+        AF
+            .request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
             .responseDecodable(of: StationResponseModel.self) { response in
                 guard case .success(let data) = response.result else {return}
                 
-                print(data.searchInfo.row)
+                print(data.stations)
             }
             .resume()
     }
