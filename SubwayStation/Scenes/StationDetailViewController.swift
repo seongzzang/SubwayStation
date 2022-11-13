@@ -11,6 +11,8 @@ import Alamofire
 
 final class StationDetailViewController: UIViewController {
     
+    private let station: Station
+    
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
@@ -39,7 +41,7 @@ final class StationDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "왕십리"
+        navigationItem.title = station.stationName
         
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints{ $0.edges.equalToSuperview()}
@@ -62,6 +64,16 @@ final class StationDetailViewController: UIViewController {
                 print(data.realtimeArrivalList)
             }
             .resume()
+    }
+    
+    init(station: Station) {
+        self.station = station
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 

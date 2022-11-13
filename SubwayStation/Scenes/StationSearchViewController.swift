@@ -72,7 +72,7 @@ extension StationSearchViewController: UISearchBarDelegate {
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-       tableView.isHidden = true
+        tableView.isHidden = true
         stations = []
     }
     
@@ -83,7 +83,8 @@ extension StationSearchViewController: UISearchBarDelegate {
 
 extension StationSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = StationDetailViewController()
+        let station = stations[indexPath.row]
+        let vc = StationDetailViewController(station: station)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
