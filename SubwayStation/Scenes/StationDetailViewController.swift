@@ -60,7 +60,8 @@ final class StationDetailViewController: UIViewController {
             .responseDecodable(of: StationArrivalDateResponseModel.self) { [weak self] response in
                 self?.refreshControl.endRefreshing()
                 
-                guard case .success(let data) = response.result else {return}
+                guard case .success (let data) = response.result else {return}
+                print("결과:\(response.result)")
                 
                 self?.realtimeArrivalList = data.realtimeArrivalList
                 self?.collectionView.reloadData()

@@ -56,8 +56,9 @@ class StationSearchViewController: UIViewController{
                 guard
                     let self = self,
                     case .success(let data) = response.result
+                        
                 else {return}
-                
+                print("결과:\(response.result)")
                 self.stations = data.stations
                 self.tableView.reloadData()
             }
