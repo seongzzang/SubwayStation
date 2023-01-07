@@ -11,6 +11,7 @@
 		69607323291BE90800A9F750 /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69607322291BE90800A9F750 /* StationDetailViewController.swift */; };
 		69607326291BEA9000A9F750 /* StationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69607325291BEA9000A9F750 /* StationSearchViewController.swift */; };
 		69607328291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69607327291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift */; };
+		6966D4B829699DF900920606 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6966D4B729699DF900920606 /* StartViewController.swift */; };
 		69A598BB291E856A005BF834 /* StationArrivalDateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A598BA291E856A005BF834 /* StationArrivalDateResponseModel.swift */; };
 		69B0E72D291A81CD003E89AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B0E72C291A81CD003E89AC /* AppDelegate.swift */; };
 		69B0E72F291A81CD003E89AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B0E72E291A81CD003E89AC /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 		69607322291BE90800A9F750 /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		69607325291BEA9000A9F750 /* StationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSearchViewController.swift; sourceTree = "<group>"; };
 		69607327291BEE2A00A9F750 /* StationDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		6966D4B729699DF900920606 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		69A598BA291E856A005BF834 /* StationArrivalDateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationArrivalDateResponseModel.swift; sourceTree = "<group>"; };
 		69B0E729291A81CD003E89AC /* SubwayStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B0E72C291A81CD003E89AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				69B0E73A291A81D0003E89AC /* Info.plist */,
 				690ECD9A291D388000BBA8D9 /* StationResponseModel.swift */,
 				69A598BA291E856A005BF834 /* StationArrivalDateResponseModel.swift */,
+				6966D4B729699DF900920606 /* StartViewController.swift */,
 				69607324291BE90D00A9F750 /* Scenes */,
 			);
 			path = SubwayStation;
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69607323291BE90800A9F750 /* StationDetailViewController.swift in Sources */,
+				6966D4B829699DF900920606 /* StartViewController.swift in Sources */,
 				690ECD9B291D388000BBA8D9 /* StationResponseModel.swift in Sources */,
 				69B0E72D291A81CD003E89AC /* AppDelegate.swift in Sources */,
 				69607326291BEA9000A9F750 /* StationSearchViewController.swift in Sources */,
