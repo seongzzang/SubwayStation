@@ -10,8 +10,9 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    private lazy var imageView: UIImage {
-       let imageView = UIImageView()
+    private lazy var startImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "")
         
         return imageView
     }()
@@ -25,8 +26,10 @@ class StartViewController: UIViewController {
     
 }
 
-private class StartViewController {
+private extension StartViewController {
     func setupLayout(){
-        [UIImageView]
+        
+        [startImageView].forEach{ addSubview($0) }
+    
     }
 }
